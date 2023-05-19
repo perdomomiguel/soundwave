@@ -326,12 +326,7 @@ function admin_table($conn, $id_cliente) {
             $correo = $row["correo"];
             $fecha_nacimiento = $row["fecha_nacimiento"];
             $direccion = $row["direccion"];
-            $tarjeta = $row["tarjeta"];
 
-            // Verificar si el usuario actual es administrador y no es el usuario en la fila actual
-            $currentAdmin = isset($_SESSION["correo"]) && $_SESSION["correo"] === $correo;
-            $isAdministrator = $row["tipo"];
-            $showDeleteButton = $isAdministrator && !$currentAdmin;
 
             echo "<tr class='producto'>
                     <td class='categoria'>$dni</td>
@@ -378,7 +373,6 @@ function users_table($conn, $id_cliente) {
                             <th class='encabezado'>Correo Electrónico</th>
                             <th class='encabezado'>Fecha de Nacimiento</th>
                             <th class='encabezado'>Dirección</th>
-                            <th class='encabezado'>Tarjeta</th>
                             <th class='encabezado'></th>
                         </tr>
                     </thead>
@@ -389,15 +383,13 @@ function users_table($conn, $id_cliente) {
             $correo = $row["correo"];
             $fecha_nacimiento = $row["fecha_nacimiento"];
             $direccion = $row["direccion"];
-            $tarjeta = $row["tarjeta"];
 
             echo "<tr class='producto'>
                     <td class='categoria'>$dni</td>
                     <td class='categoria'>$nombre</td>
                     <td class='categoria'>$correo</td>
                     <td class='categoria'>$fecha_nacimiento</td>
-                    <td class='categoria'>$direccion</td>
-                    <td class='categoria'>$tarjeta</td>";
+                    <td class='categoria'>$direccion</td>";
 
             // Formulario para eliminar un usuario
             echo "<form method='POST'>

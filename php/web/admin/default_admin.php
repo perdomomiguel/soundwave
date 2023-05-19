@@ -33,4 +33,5 @@ if ($result->num_rows === 0) {
 } else {
     echo "Ya existe un administrador en la tabla de usuarios.";
 }
+
 ?>

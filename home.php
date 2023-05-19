@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include "../../parts/config.php";
-include "../../parts/functions.php";
+include "php/parts/config.php";
+include "php/parts/functions.php";
 
 // Verificar si el usuario ha iniciado sesión
 if (isset($_SESSION["nombre"]) && isset($_SESSION["id_cliente"])) {
@@ -12,15 +12,15 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["id_cliente"])) {
 }
 
 if(isset($_POST["fav-nav"])) {
-    header("location:fav.php");
+    header("location: php/cliente/fav.php");
 }
 
 if(isset($_POST["cart-nav"])) {
-    header("location:cart.php");
+    header("location: php/cliente/cart.php");
 }
 
 if(isset($_POST["cerrar"])) {
-    include("../../parts/session_destroy.php");
+    include("php/parts/session_destroy.php");
 }
 ?>
 
@@ -33,8 +33,8 @@ if(isset($_POST["cerrar"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soundwave | Home</title>
-    <link rel="icon" type="image/x-icon" href="../../../img/icon/logo.ico">
-    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="icon" type="image/x-icon" href="/img/icon/logo.ico">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 
@@ -48,21 +48,21 @@ echo nav_cliente();
     <div class="images">
 
         <div class="example">
-            <img class="background-image" src="../../../img/home/shop images/image_shop1.PNG" alt="">
+            <img class="background-image" src="img/home/shop images/image_shop1.PNG" alt="">
             <div class="fadedbox">
                 <div class="title text">Guitarras de todas las marcas</div>
             </div>
         </div>
 
         <div class="example">
-            <img class="background-image" src="../../../img/home/shop images/image_shop2.PNG" alt="">
+            <img class="background-image" src="img/home/shop images/image_shop2.PNG" alt="">
             <div class="fadedbox">
                 <div class="title text">Productos de primera calidad</div>
             </div>
         </div>
 
         <div class="example">
-            <img class="background-image" src="../../../img/home/shop images/image_shop3.PNG" alt="">
+            <img class="background-image" src="img/home/shop images/image_shop3.PNG" alt="">
             <div class="fadedbox">
                 <div class="title text">Abierto 24 horas</div>
             </div>
@@ -93,7 +93,7 @@ echo nav_cliente();
             </div>
 
             <div class="example2">
-                <img class="img-section" src="../../../img/home/section1/image_section1.PNG" alt="">
+                <img class="img-section" src="/img/home/section1/image_section1.PNG" alt="">
                 <div class="fadedbox2">
                     <div class="title text">Busca tu instrumento ideal</div>
                 </div>
@@ -111,7 +111,7 @@ echo nav_cliente();
     <div class="section2">
         <div class="section2-2"></div>
         <div class="example2">
-            <img class="img-section" src="../../../img/home/section2/image-section2.PNG" alt="">
+            <img class="img-section" src="/img/home/section2/image-section2.PNG" alt="">
             <div class="fadedbox2">
                 <div class="title text">Encuentra tu sonido perfecto</div>
             </div>
@@ -142,25 +142,25 @@ echo nav_cliente();
         <div class="comments">
             
             <div class="comment">
-                <img class="person" src="../../../img/home/comments/person1.PNG" alt="">
+                <img class="person" src="/img/home/comments/person1.PNG" alt="">
                 <div class="comment-section">
-                    <img class="stars" src="../../../img/home/comments/5 stars.png" alt="">
+                    <img class="stars" src="/img/home/comments/5 stars.png" alt="">
                     <p class="opinion">"¡Esta tienda es increíble! Tienen una gran selección de guitarras de alta calidad y los precios son razonables. Además, el personal es muy amable y servicial. Definitivamente recomiendo esta tienda para cualquier músico en busca de una nueva guitarra o equipo de audio."</p>
                 </div>
             </div>
 
             <div class="comment">
-                <img class="person" src="../../../img/home/comments/person2.PNG" alt="">
+                <img class="person" src="/img/home/comments/person2.PNG" alt="">
                 <div class="comment-section">
-                    <img class="stars" src="../../../img/home/comments/5 stars.png" alt="">
+                    <img class="stars" src="/img/home/comments/5 stars.png" alt="">
                     <p class="opinion">"Tuve una experiencia fantástica comprando mi nueva guitarra aquí. El personal fue muy conocedor y me ayudó a encontrar la guitarra perfecta para mis necesidades. También me dieron buenos consejos sobre cómo cuidar mi guitarra y sacarle el máximo provecho. ¡Gracias!"</p>
                 </div>
             </div>
 
             <div class="comment">
-                <img class="person" src="../../../img/home/comments/person3.PNG" alt="">
+                <img class="person" src="/img/home/comments/person3.PNG" alt="">
                 <div class="comment-section">
-                    <img class="stars" src="../../../img/home/comments/5 stars.png" alt="">
+                    <img class="stars" src="/img/home/comments/5 stars.png" alt="">
                     <p class="opinion">"No puedo decir suficientes cosas buenas sobre esta tienda. Compré mi guitarra aquí y fue una gran experiencia. El personal es muy amable y servicial, y tienen una gran selección de guitarras de alta calidad. También ofrecen reparación y mantenimiento de guitarras, lo cual es genial.</p>
                 </div>
             </div>
@@ -174,14 +174,13 @@ echo nav_cliente();
 
 <footer>
     <div class="social">
-        <img class="social-icon" src="../../../img/footer/twitter-dark.png" alt="">
-        <img class="social-icon" src="../../../img/footer/youtube-dark.png" alt="">
-        <img class="social-icon" src="../../../img/footer/instagram-dark.png" alt="">
+        <img class="social-icon" src="/img/footer/twitter-dark.png" alt="">
+        <img class="social-icon" src="/img/footer/youtube-dark.png" alt="">
+        <img class="social-icon" src="/img/footer/instagram-dark.png" alt="">
     </div>
 
 </footer>
 
-<script src="../../../code/code.js"></script>
 </html>
 
 <style>

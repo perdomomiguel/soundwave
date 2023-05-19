@@ -16,7 +16,7 @@ CREATE TABLE usuarios (
     correo VARCHAR(255),
     contrasena VARCHAR(255),
     fecha_nacimiento VARCHAR(10),
-    tarjeta VARCHAR(12),
+    tarjeta VARCHAR(16),
     direccion VARCHAR(255),
     PRIMARY KEY(id_cliente)
 );

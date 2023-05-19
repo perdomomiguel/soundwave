@@ -1,0 +1,8 @@
+{
+    "name": "soundwave-musica",
+    "description": "Proyecto Final 2ºDAW",
+    "require": {
+        "php": "^7.4",
+        "vendor/package": "1.0.0"
+    }
+}

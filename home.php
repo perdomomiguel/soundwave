@@ -12,15 +12,15 @@ if (isset($_SESSION["nombre"]) && isset($_SESSION["id_cliente"])) {
 }
 
 if(isset($_POST["fav-nav"])) {
-    header("location: php/cliente/fav.php");
+    header("location:fav.php");
 }
 
 if(isset($_POST["cart-nav"])) {
-    header("location: php/cliente/cart.php");
+    header("location:cart.php");
 }
 
 if(isset($_POST["cerrar"])) {
-    include("php/parts/session_destroy.php");
+    include("session_destroy.php");
 }
 ?>
 
